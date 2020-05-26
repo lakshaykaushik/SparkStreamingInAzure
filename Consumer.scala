@@ -4,6 +4,11 @@ val connection_string = ""
 
 
 import kafkashaded.org.apache.kafka.common.security.plain.PlainLoginModule
+import org.apache.spark.sql.types._
+import org.apache.spark.sql.functions._
+import org.apache.spark.sql.functions.{min, max}
+
+import org.apache.spark.sql.Row
 // READ STREAM USING SPARK's KAFKA CONNECTOR
 val kafka = spark.readStream
     .format("kafka")
@@ -19,10 +24,7 @@ val kafka = spark.readStream
     .option("kafka.group.id", "$Default")
     .load()
 
-    import org.apache.spark.sql.types._
-import org.apache.spark.sql.functions._
-import org.apache.spark.sql.functions.{min, max}
-import org.apache.spark.sql.Row
+
 
 val dataSchema = StructType(Seq(StructField("metric",StringType,true)))
 
