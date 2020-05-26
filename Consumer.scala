@@ -1,6 +1,6 @@
-val TOPIC = "ingestevents"
-val kafkaBrokers = "testsparkstreaming.servicebus.windows.net:9093"
-val connection_string = "org.apache.kafka.common.security.plain.PlainLoginModule required username=\"$ConnectionString\" password=\"Endpoint=sb://testsparkstreaming.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=z1JAKV+wRRt7KtY+rGAgCkcH5ez5ZuqD9WJmfVkAl9s=\";"
+val TOPIC = ""
+val kafkaBrokers = ""
+val connection_string = ""
 
 
 import kafkashaded.org.apache.kafka.common.security.plain.PlainLoginModule
